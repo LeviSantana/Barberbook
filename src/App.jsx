@@ -728,7 +728,7 @@ function EstTab({ establishments, setEstablishments, showNotif, isAdmin }) {
         </div>
         {/* BOTÃO PRINCIPAL — abre onboarding ou modal dependendo se é admin */}
         {isAdmin
-          ? <button className="btn bp" onClick={openNewE}><Icon name="plus" size={16} /> Cadastrar Estabelecimento</button>
+          ? <button className="btn bp" onClick={() => { setEditE(null); setEForm(emptyE); setShowEM(true); }}><Icon name="plus" size={16} /> Cadastrar Estabelecimento</button>
           : <button className="btn bw" onClick={() => setView("onboarding")}>
             <Icon name="whatsapp" size={16} /> Quero Cadastrar Meu Estabelecimento
           </button>
